@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Conviwizard</string>
+    <string name="home">home</string>
+    <string name="search">search</string>
+    <string name="like">like</string>
+    <string name="mypage">myPage</string>
+    <string name="recommendation">recommendation</string>
 </resources>
