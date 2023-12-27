@@ -9,6 +9,7 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.outlined.Favorite
+import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.Search
@@ -51,7 +52,7 @@ sealed class Screen(
     data object Like : Screen(
         route = "like",
         stringResourceId = R.string.like,
-        unSelectedIconImageVector = Icons.Outlined.Favorite,
+        unSelectedIconImageVector = Icons.Outlined.FavoriteBorder,
         selectedIconImageVector = Icons.Filled.Favorite,
     )
 
