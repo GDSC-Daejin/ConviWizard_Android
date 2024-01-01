@@ -28,6 +28,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.soopeach.conviwizard.ui.components.RecommendedKeywordChip
+import com.soopeach.conviwizard.ui.components.SearchBar
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -44,32 +45,9 @@ fun SearchScreen(
         Spacer(modifier = Modifier.height(16.dp))
 
         var query by remember { mutableStateOf("") }
-        BasicTextField(value = query, onValueChange = { query = it })
-        { innerTextField ->
-
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(48.dp)
-                    .clip(RoundedCornerShape(20.dp))
-                    .border(1.dp, Color.Black, RoundedCornerShape(20.dp))
-                    .padding(12.dp),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = androidx.compose.ui.Alignment.CenterVertically
-            ) {
-                if (query.isEmpty()) {
-                    Box {
-                        Text(text = "검색어를 입력해주세요.")
-                        innerTextField()
-                    }
-                } else {
-                    innerTextField()
-                }
-
-
-                Icon(imageVector = Icons.Filled.Search, contentDescription = "검색 아이콘")
-            }
-        }
+        SearchBar(value = query, onValueChange = {
+            query = it
+        })
 
         Spacer(modifier = Modifier.height(16.dp))
 
