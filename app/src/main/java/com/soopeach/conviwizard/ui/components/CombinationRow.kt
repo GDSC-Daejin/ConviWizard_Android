@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.dp
 fun <T> CombinationRow(
     rowTitle: String,
     itemList: List<T>,
+    onItemClicked: (Long) -> Unit = {}
 ) {
     Column(
         modifier = Modifier
@@ -29,7 +30,9 @@ fun <T> CombinationRow(
         LazyRow(
         ) {
             items(itemList.size) {
-                SmallCombinationItem("https://picsum.photos/200", "조합 이름")
+                SmallCombinationItem("https://picsum.photos/200", "조합 이름") {
+                    onItemClicked(it)
+                }
             }
         }
     }

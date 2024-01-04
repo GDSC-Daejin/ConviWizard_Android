@@ -54,7 +54,9 @@ fun HomeScreen(
             CombinationRow(
                 rowTitle = "최근 등록된 조합",
                 itemList = recentItemList,
-            )
+            ) {
+                navController.navigate("detail/$it")
+            }
         }
 
         val popularItemList = (1..100).toList()
@@ -63,7 +65,9 @@ fun HomeScreen(
             CombinationRow(
                 rowTitle = "인기 조합",
                 itemList = popularItemList,
-            )
+            ) {
+                navController.navigate("detail/$it")
+            }
         }
 
         val recommendationItemList = (1..100).toList()
@@ -72,7 +76,9 @@ fun HomeScreen(
             CombinationRow(
                 rowTitle = "추천 조합",
                 itemList = recommendationItemList,
-            )
+            ) {
+                navController.navigate("detail/$it")
+            }
         }
 
         item {

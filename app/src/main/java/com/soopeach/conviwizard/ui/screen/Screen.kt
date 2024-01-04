@@ -6,16 +6,15 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.ThumbUp
-import androidx.compose.material.icons.outlined.Favorite
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Person
-import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NamedNavArgument
+import androidx.navigation.NavType
+import androidx.navigation.navArgument
 import com.soopeach.conviwizard.R
 
 sealed class Screen(
@@ -33,6 +32,14 @@ sealed class Screen(
         stringResourceId = R.string.home,
         unSelectedIconImageVector = Icons.Outlined.Home,
         selectedIconImageVector = Icons.Filled.Home,
+    )
+
+    data object Detail: Screen(
+        route = "detail/{postId}",
+        stringResourceId = R.string.detail,
+        arguments = listOf(
+            navArgument("postId") { type = NavType.LongType },
+        ),
     )
 
     data object Recommendation : Screen(

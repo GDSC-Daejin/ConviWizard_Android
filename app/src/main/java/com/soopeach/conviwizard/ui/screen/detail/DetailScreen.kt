@@ -30,6 +30,7 @@ import com.soopeach.conviwizard.ui.components.Divider
 @Composable
 fun DetailScreen(
     navController: NavHostController,
+    postId: Long
 ) {
 
     LazyColumn {

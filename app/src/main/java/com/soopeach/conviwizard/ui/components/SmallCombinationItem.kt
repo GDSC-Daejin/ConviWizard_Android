@@ -1,5 +1,6 @@
 package com.soopeach.conviwizard.ui.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -20,11 +21,15 @@ import coil.compose.AsyncImage
 fun SmallCombinationItem(
     imageUrl: String = "https://picsum.photos/200",
     combinationName: String,
+    onItemClicked: (Long) -> Unit = {}
 ) {
     Column(
         modifier = Modifier
             .width(100.dp)
-            ,
+            .clickable {
+                // TODO: PostId
+                onItemClicked(0)
+            },
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {

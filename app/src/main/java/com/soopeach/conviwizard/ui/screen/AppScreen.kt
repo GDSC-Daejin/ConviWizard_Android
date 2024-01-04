@@ -29,6 +29,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.soopeach.conviwizard.ui.screen.recommendation.RecommendationScreen
 import com.soopeach.conviwizard.ui.screen.Screen.Companion.bottomNavigationItems
+import com.soopeach.conviwizard.ui.screen.detail.DetailScreen
 import com.soopeach.conviwizard.ui.screen.home.HomeScreen
 import com.soopeach.conviwizard.ui.screen.like.LikeScreen
 import com.soopeach.conviwizard.ui.screen.mypage.MyPageScreen
@@ -112,6 +113,15 @@ fun AppScreenContent(
         ) {
             composable(Screen.Home.route) {
                 HomeScreen(navController)
+            }
+
+            composable(
+                Screen.Detail.route,
+                Screen.Detail.arguments
+            ) { backStackEntry ->
+                val arguments = requireNotNull(backStackEntry.arguments)
+                val postId = arguments.getLong("postId", -1L)
+                DetailScreen(navController, postId)
             }
 
             composable(Screen.Recommendation.route) {
