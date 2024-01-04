@@ -35,13 +35,6 @@ sealed class Screen(
         selectedIconImageVector = Icons.Filled.Home,
     )
 
-    data object Search : Screen(
-        route = "search",
-        stringResourceId = R.string.search,
-        unSelectedIconImageVector = Icons.Outlined.Search,
-        selectedIconImageVector = Icons.Filled.Search,
-    )
-
     data object Recommendation : Screen(
         route = "recommendation",
         stringResourceId = R.string.recommendation,
@@ -64,6 +57,6 @@ sealed class Screen(
     )
 
     companion object {
-        val bottomNavigationItems = listOf(Home, Search, Recommendation, Like, MyPage)
+        val bottomNavigationItems = listOf(Home, Recommendation, Like, MyPage)
     }
 }
