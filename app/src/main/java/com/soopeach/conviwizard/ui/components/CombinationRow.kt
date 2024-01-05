@@ -9,7 +9,9 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun <T> CombinationRow(
@@ -20,10 +22,12 @@ fun <T> CombinationRow(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(24.dp)
+            .padding(start = 24.dp, end = 24.dp, top = 24.dp)
     ) {
 
-        Text(text = rowTitle)
+        Text(text = rowTitle,
+            fontWeight = FontWeight.Bold,
+            fontSize = 18.sp)
 
         Spacer(modifier = Modifier.height(12.dp))
 

@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 
 @Composable
@@ -45,6 +46,7 @@ fun SmallCombinationItem(
         Text(
             text = combinationName,
             textAlign = TextAlign.Center,
+            fontSize = 14.sp
         )
     }
 }
