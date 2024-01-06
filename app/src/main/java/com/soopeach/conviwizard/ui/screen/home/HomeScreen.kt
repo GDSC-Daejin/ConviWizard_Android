@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.soopeach.conviwizard.R
 import com.soopeach.conviwizard.ui.components.CombinationRow
+import com.soopeach.conviwizard.ui.screen.Screen
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -88,7 +89,7 @@ fun HomeScreen(
                     .padding(24.dp),
                 contentAlignment = Alignment.CenterEnd
             ) {
-                FloatingActionButton(onClick = { /*TODO*/ }) {
+                FloatingActionButton(onClick = { navController.navigate(Screen.Write.route) }) {
                     Image(
                         painter = painterResource(id = R.drawable.pencil),
                         contentDescription = "글쓰기 버튼"
