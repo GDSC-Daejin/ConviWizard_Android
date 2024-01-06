@@ -31,6 +31,7 @@ import com.soopeach.conviwizard.ui.screen.recommendation.RecommendationScreen
 import com.soopeach.conviwizard.ui.screen.Screen.Companion.bottomNavigationItems
 import com.soopeach.conviwizard.ui.screen.detail.DetailScreen
 import com.soopeach.conviwizard.ui.screen.home.HomeScreen
+import com.soopeach.conviwizard.ui.screen.home.WriteScreen
 import com.soopeach.conviwizard.ui.screen.like.LikeScreen
 import com.soopeach.conviwizard.ui.screen.mypage.MyPageScreen
 
@@ -113,6 +114,10 @@ fun AppScreenContent(
         ) {
             composable(Screen.Home.route) {
                 HomeScreen(navController)
+            }
+
+            composable(Screen.Write.route) {
+                WriteScreen(navController)
             }
 
             composable(

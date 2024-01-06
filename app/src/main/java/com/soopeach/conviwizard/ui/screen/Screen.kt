@@ -34,6 +34,11 @@ sealed class Screen(
         selectedIconImageVector = Icons.Filled.Home,
     )
 
+    data object Write : Screen(
+        route = "write",
+        stringResourceId = R.string.write,
+    )
+
     data object Detail: Screen(
         route = "detail/{postId}",
         stringResourceId = R.string.detail,
