@@ -97,4 +97,9 @@ dependencies {
     implementation("io.insert-koin:koin-android:$koinVersion")
     implementation("io.insert-koin:koin-android-compat:$koinVersion")
     implementation("io.insert-koin:koin-androidx-compose:$koinVersion")
+
+    // orbit
+    val orbitVersion = "4.6.1"
+    implementation("org.orbit-mvi:orbit-viewmodel:$orbitVersion")
+    implementation("org.orbit-mvi:orbit-compose:$orbitVersion")
 }
