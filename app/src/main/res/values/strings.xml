@@ -8,4 +8,6 @@
     <string name="detail">detail</string>
     <string name="write">write</string>
     <string name="login">login</string>
+    <string name="check">check</string>
+    <string name="sign_up">signUp</string>
 </resources>

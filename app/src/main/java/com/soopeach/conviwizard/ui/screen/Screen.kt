@@ -27,9 +27,19 @@ sealed class Screen(
     val arguments: List<NamedNavArgument> = emptyList(),
 ) {
 
+    data object Check : Screen(
+        route = "check",
+        stringResourceId = R.string.check,
+    )
+
     data object Login : Screen(
         route = "login",
         stringResourceId = R.string.login,
+    )
+
+    data object SignUp : Screen(
+        route = "signUp",
+        stringResourceId = R.string.sign_up,
     )
 
     data object Home : Screen(
@@ -44,7 +54,7 @@ sealed class Screen(
         stringResourceId = R.string.write,
     )
 
-    data object Detail: Screen(
+    data object Detail : Screen(
         route = "detail/{postId}",
         stringResourceId = R.string.detail,
         arguments = listOf(

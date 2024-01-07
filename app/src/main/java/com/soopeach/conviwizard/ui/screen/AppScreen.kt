@@ -34,6 +34,7 @@ import com.soopeach.conviwizard.ui.screen.home.HomeScreen
 import com.soopeach.conviwizard.ui.screen.home.WriteScreen
 import com.soopeach.conviwizard.ui.screen.like.LikeScreen
 import com.soopeach.conviwizard.ui.screen.login.LoginScreen
+import com.soopeach.conviwizard.ui.screen.login.SignUpScreen
 import com.soopeach.conviwizard.ui.screen.mypage.MyPageScreen
 
 @Composable
@@ -110,12 +111,20 @@ fun AppScreenContent(
     ) { innerPadding ->
         NavHost(
             navController,
-            startDestination = Screen.Home.route,
+            startDestination = Screen.Check.route,
             Modifier.padding(innerPadding),
         ) {
 
+            composable(Screen.Check.route) {
+                CheckScreen(navController)
+            }
+
             composable(Screen.Login.route) {
                 LoginScreen(navController)
+            }
+
+            composable(Screen.SignUp.route) {
+                SignUpScreen(navController)
             }
 
             composable(Screen.Home.route) {

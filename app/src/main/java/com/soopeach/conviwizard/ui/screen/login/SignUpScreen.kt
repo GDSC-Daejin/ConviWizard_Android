@@ -25,11 +25,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.soopeach.conviwizard.ui.components.BasicInputTextForm
 import com.soopeach.conviwizard.ui.components.Divider
 
 @Composable
-fun SignUpScreen() {
+fun SignUpScreen(
+    navController: NavHostController,
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -117,25 +120,5 @@ fun SignUpScreen() {
 
         Spacer(modifier = Modifier.padding(10.dp))
 
-        Row {
-            Text(
-                text = "Don't you have an account?",
-                fontSize = 14.sp,
-                fontWeight = FontWeight.Bold,
-                color = Color.Black
-            )
-
-            Spacer(modifier = Modifier.padding(6.dp))
-
-            Text(
-                modifier = Modifier.clickable {
-                    // TODO: navigate to sign up
-                },
-                text = "Sign Up",
-                fontSize = 14.sp,
-                fontWeight = FontWeight.Bold,
-                color = Color.Gray
-            )
-        }
     }
 }

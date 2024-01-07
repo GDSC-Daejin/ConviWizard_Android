@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.soopeach.conviwizard.ui.components.BasicInputTextForm
 import com.soopeach.conviwizard.ui.components.Divider
+import com.soopeach.conviwizard.ui.screen.Screen
 
 @Composable
 fun LoginScreen(
@@ -131,7 +132,7 @@ fun LoginScreen(
 
             Text(
                 modifier = Modifier.clickable {
-                    // TODO: navigate to sign up
+                    navController.navigate(Screen.SignUp.route)
                 },
                 text = "Sign Up",
                 fontSize = 14.sp,
