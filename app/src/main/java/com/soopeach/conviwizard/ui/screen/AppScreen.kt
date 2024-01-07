@@ -33,6 +33,7 @@ import com.soopeach.conviwizard.ui.screen.detail.DetailScreen
 import com.soopeach.conviwizard.ui.screen.home.HomeScreen
 import com.soopeach.conviwizard.ui.screen.home.WriteScreen
 import com.soopeach.conviwizard.ui.screen.like.LikeScreen
+import com.soopeach.conviwizard.ui.screen.login.LoginScreen
 import com.soopeach.conviwizard.ui.screen.mypage.MyPageScreen
 
 @Composable
@@ -112,6 +113,11 @@ fun AppScreenContent(
             startDestination = Screen.Home.route,
             Modifier.padding(innerPadding),
         ) {
+
+            composable(Screen.Login.route) {
+                LoginScreen(navController)
+            }
+
             composable(Screen.Home.route) {
                 HomeScreen(navController)
             }

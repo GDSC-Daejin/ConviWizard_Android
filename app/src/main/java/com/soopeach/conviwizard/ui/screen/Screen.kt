@@ -27,6 +27,11 @@ sealed class Screen(
     val arguments: List<NamedNavArgument> = emptyList(),
 ) {
 
+    data object Login : Screen(
+        route = "login",
+        stringResourceId = R.string.login,
+    )
+
     data object Home : Screen(
         route = "home",
         stringResourceId = R.string.home,
