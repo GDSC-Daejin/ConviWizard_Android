@@ -88,4 +88,13 @@ dependencies {
     // DataStore
     implementation("androidx.datastore:datastore-preferences:1.0.0")
 
+    val koinVersion = "3.4.0"
+    // koin-core
+    implementation("io.insert-koin:koin-core:$koinVersion")
+    implementation("io.insert-koin:koin-test:$koinVersion")
+
+    // koin-android
+    implementation("io.insert-koin:koin-android:$koinVersion")
+    implementation("io.insert-koin:koin-android-compat:$koinVersion")
+    implementation("io.insert-koin:koin-androidx-compose:$koinVersion")
 }
