@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlinx-serialization")
 }
 
 android {
@@ -102,4 +103,12 @@ dependencies {
     val orbitVersion = "4.6.1"
     implementation("org.orbit-mvi:orbit-viewmodel:$orbitVersion")
     implementation("org.orbit-mvi:orbit-compose:$orbitVersion")
+
+    val ktorVersion = "2.2.4"
+    implementation("io.ktor:ktor-client-core:$ktorVersion")
+    implementation("io.ktor:ktor-client-cio:$ktorVersion")
+    implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
 }
