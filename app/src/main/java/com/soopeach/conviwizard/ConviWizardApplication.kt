@@ -19,6 +19,7 @@ class ConviWizardApplication : Application() {
                     repositoryModule,
                     dataSourceModule,
                     databaseModule,
+                    networkModule
                 ),
             )
         }
