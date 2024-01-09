@@ -25,11 +25,11 @@ fun CheckScreen(
         is UiState.Idle -> {
 
         }
-        is UiState.Loading -> {
-            navController.navigate(Screen.Login.route)
-        }
         is UiState.Success -> {
             navController.navigate(Screen.Home.route)
+        }
+        is UiState.Loading -> {
+            navController.navigate(Screen.Login.route)
         }
         is UiState.Error -> {
 

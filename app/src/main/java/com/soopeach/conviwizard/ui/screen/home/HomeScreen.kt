@@ -22,12 +22,16 @@ import androidx.navigation.NavHostController
 import com.soopeach.conviwizard.R
 import com.soopeach.conviwizard.ui.components.CombinationRow
 import com.soopeach.conviwizard.ui.screen.Screen
+import com.soopeach.conviwizard.viewmodel.HomeScreenViewModel
+import org.koin.androidx.compose.koinViewModel
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun HomeScreen(
     navController: NavHostController,
 ) {
+
+    val viewModel = koinViewModel<HomeScreenViewModel>()
 
     val bannerItemList = (1..5).toList()
     val pagerState = rememberPagerState(pageCount = { bannerItemList.size })
