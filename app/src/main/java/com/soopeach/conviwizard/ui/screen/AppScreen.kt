@@ -82,11 +82,11 @@ fun AppScreenContent(
                             modifier = Modifier
                                 .clickable {
                                     navController.navigate(screen.route) {
-                                        popUpTo(navController.graph.findStartDestination().id) {
-                                            saveState = true
-                                        }
-                                        launchSingleTop = true
-                                        restoreState = true
+//                                        popUpTo(navController.graph.findStartDestination().id) {
+//                                            saveState = true
+//                                        }
+//                                        launchSingleTop = true
+//                                        restoreState = true
                                     }
                                 }
                                 .weight(1f)

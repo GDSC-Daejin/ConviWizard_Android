@@ -24,15 +24,12 @@ class CheckScreenViewModel(
     override val container: Container<CheckScreenState, CheckScreenSideEffect>
         = container(CheckScreenState())
 
-    init {
-        getUid()
-    }
-
-    private fun getUid() = intent {
+    fun getUid() = intent {
         val uid = getUidUseCase()
+
         reduce {
             if (uid == null) {
-                state.copy(uid = UiState.Idle)
+                state.copy(uid = UiState.Loading)
             } else {
                 state.copy(uid = UiState.Success(uid))
             }
