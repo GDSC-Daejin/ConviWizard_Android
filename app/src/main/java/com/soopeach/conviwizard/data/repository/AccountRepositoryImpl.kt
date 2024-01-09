@@ -18,4 +18,8 @@ class AccountRepositoryImpl(
     override suspend fun postSignUpRequest(signUpRequest: SignUpRequest): String {
         return accountDatasource.postSignUpRequest(signUpRequest)
     }
+
+    override suspend fun requestLogin(memberId: String, password: String): String {
+        return accountDatasource.requestLogin(memberId, password)
+    }
 }
