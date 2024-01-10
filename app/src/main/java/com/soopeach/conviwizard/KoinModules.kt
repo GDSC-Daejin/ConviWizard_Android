@@ -11,6 +11,7 @@ import com.soopeach.conviwizard.domain.repository.AccountRepository
 import com.soopeach.conviwizard.domain.repository.PostRepository
 import com.soopeach.conviwizard.domain.usecase.GetPostsUseCase
 import com.soopeach.conviwizard.domain.usecase.GetUidUseCase
+import com.soopeach.conviwizard.domain.usecase.PostPostUseCase
 import com.soopeach.conviwizard.domain.usecase.PostSignUpUseCase
 import com.soopeach.conviwizard.domain.usecase.RequestLoginUseCase
 import com.soopeach.conviwizard.domain.usecase.UpdateUidUseCase
@@ -18,6 +19,7 @@ import com.soopeach.conviwizard.viewmodel.CheckScreenViewModel
 import com.soopeach.conviwizard.viewmodel.HomeScreenViewModel
 import com.soopeach.conviwizard.viewmodel.LoginScreenViewModel
 import com.soopeach.conviwizard.viewmodel.SignUpScreenViewModel
+import com.soopeach.conviwizard.viewmodel.WriteScreenViewModel
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -35,6 +37,7 @@ val viewModelModule = module {
     single { SignUpScreenViewModel(get()) }
     single { LoginScreenViewModel(get(), get()) }
     single { HomeScreenViewModel(get()) }
+    single { WriteScreenViewModel(get()) }
 }
 
 val useCaseModule = module {
@@ -43,6 +46,7 @@ val useCaseModule = module {
     single { RequestLoginUseCase(get()) }
     single { UpdateUidUseCase(get()) }
     single { GetPostsUseCase(get()) }
+    single { PostPostUseCase(get()) }
 }
 
 val repositoryModule = module {
